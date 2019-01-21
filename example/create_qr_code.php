@@ -7,7 +7,7 @@
 
   // Parameters to be provided to API server to generate qr(data)code
   $params = (object)array(
-    "apiHost" => "http://payapi.excatch.com/api/bus/qrcode/create", // API HOST URL
+    "apiHost" => "https://payapi.bitcom.com/api/bus/qrcode/create", // API HOST URL
     "appKey" => $keys->access_key, // ACCESS KEY
     "coinId" => "4", // 2(BS), 3(ETH), 4(USDT), 5(BTC), 6(BCH), 7(XRP) // The kind of coins a merchant would like to get.
     "currencyType" => "3", // 1(CNY), 2(USD), 3(KRW) // The type of legal currency for the item price.
