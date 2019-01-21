@@ -5,7 +5,7 @@
     "secret_key" => "input-your-secret-key"
   );
 
-  // Parameters to be provided to API to generate qr(data)code
+  // Parameters to be provided to API server to generate qr(data)code
   $params = (object)array(
     "apiHost" => "http://payapi.excatch.com/api/bus/qrcode/create", // API HOST URL
     "appKey" => $keys->access_key, // ACCESS KEY
@@ -22,6 +22,7 @@
 
   $sign_string = $query_string . $keys->secret_key;
 
+  // Capitalize MD5 result values.
   $signature = strtoupper(md5($sign_string));
 
   $query_string .= "sign={$signature}";
